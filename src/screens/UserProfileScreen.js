@@ -32,7 +32,7 @@ const UserProfileScreen = ({navigation}) => {
 
                 <ScrollView>
                     {/*Personal Information this will use after authentication */}
-                    <TouchableOpacity onPress={() => navigation.navigate("PersonalInfo")}>
+                    <TouchableOpacity onPress={() => navigation.navigate("PersonalInfoStack")}>
                         <View style={styles.userProfileContent}>
                             <View style={styles.profileIcon}>
                                 <Text>
@@ -54,6 +54,7 @@ const UserProfileScreen = ({navigation}) => {
         </SafeAreaView>
     );
 };
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
