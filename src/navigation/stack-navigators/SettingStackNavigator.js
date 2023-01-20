@@ -1,14 +1,14 @@
 import React from 'react'
+import {View, Text, TouchableOpacity, StyleSheet} from 'react-native'
 import {createStackNavigator} from '@react-navigation/stack'
-import {Platform, StyleSheet, Text, TouchableOpacity, View} from "react-native";
+import SettingScreen from '../../screens/SettingScreen'
 import {FontAwesome, Ionicons} from "@expo/vector-icons";
-import UserProfileScreen from "../../screens/UserProfileScreen";
 const Stack = createStackNavigator();
 
 
-const UserProfileStackNavigator = () => {
+const SettingStackNavigator = () => {
     return (
-        <Stack.Navigator screenOptions={({navigation, route}) => ({
+        <Stack.Navigator screenOptions={({navigation}) => ({
             headerShown: true,
             headerTintColor: '#ffffff',
             headerStyle: {
@@ -16,7 +16,7 @@ const UserProfileStackNavigator = () => {
                 height: 50
             },
             headerLeft: () => (
-                <TouchableOpacity onPress={() => navigation.goBack()} style={styles.headerLeft}>
+                <TouchableOpacity onPress={()=>navigation.navigate('UserProfileStack')} style={styles.headerLeft}>
                     <Ionicons name="arrow-back-outline" size={25} color="#fff" style={{padding: 5}}/>
                 </TouchableOpacity>
             ),
@@ -29,9 +29,7 @@ const UserProfileStackNavigator = () => {
                             </TouchableOpacity>
                         </Text>
                         <Text style={styles.headerSearchIcon}>
-                            <TouchableOpacity
-                                onPress={() => navigation.navigate('UserProfileStack')}
-                                style={styles.touchableButton}>
+                            <TouchableOpacity style={styles.touchableButton} onPress={()=>navigation.navigate('UserProfileStack')}>
                                 <FontAwesome name="user" size={20} color="#fff"/>
                             </TouchableOpacity>
                         </Text>
@@ -39,15 +37,7 @@ const UserProfileStackNavigator = () => {
                 </View>
             ),
         })}>
-            <Stack.Screen
-                name="User Profile"
-                component={UserProfileScreen}
-                // Custom title
-                options={{
-                    title: "User Profile",
-                    headerTitleAlign: 'left',
-                }}
-            />
+            <Stack.Screen name="Settings" component={SettingScreen}/>
         </Stack.Navigator>
     )
 };
@@ -71,29 +61,14 @@ const styles = StyleSheet.create({
     headerUserIcon: {
         marginLeft: 20
     },
-    touchableButton: {
+    touchableButton:{
         backgroundColor: "#551E18",
         overflow: "hidden",
-        paddingLeft: 5,
-        paddingRight: 5,
-        paddingTop: 3,
-        padding: 3,
-        borderRadius: 50
-    },
-    headerImage: {
-        ...Platform.select({
-            ios: {
-                width: 150,
-                height: 20,
-            },
-            android: {
-                width: 150,
-                height: 20,
-            }
-        })
-    },
-
+        paddingLeft:5,
+        paddingRight:5,
+        paddingTop:3,
+        padding:3,
+        borderRadius:50
+    }
 });
-
-
-export default UserProfileStackNavigator
+export default SettingStackNavigator

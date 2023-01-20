@@ -32,7 +32,7 @@ const UserProfileScreen = ({navigation}) => {
 
                 <ScrollView>
                     {/*Personal Information this will use after authentication */}
-                    <TouchableOpacity onPress={() => navigation.navigate("PersonalInfo")}>
+                    <TouchableOpacity onPress={() => navigation.navigate("PersonalInfoStack")}>
                         <View style={styles.userProfileContent}>
                             <View style={styles.profileIcon}>
                                 <Text>
@@ -49,11 +49,50 @@ const UserProfileScreen = ({navigation}) => {
                             </View>
                         </View>
                     </TouchableOpacity>
+
+                    {/* Return Policy Stack */}
+                    <TouchableOpacity onPress={() => navigation.navigate("ReturnPolicyStack")}>
+                        <View style={styles.userProfileContent}>
+                            <View style={styles.profileIcon}>
+                                <Text>
+                                    <FontAwesome name="user-o" size={20} color="black"/>
+                                </Text>
+                            </View>
+                            <View style={styles.profileInfo}>
+                                <Text style={styles.profileInfoTitle}>Return Policy</Text>
+                            </View>
+                            <View style={styles.profileRightArrow}>
+                                <Text>
+                                    <MaterialIcons name="keyboard-arrow-right" size={24} color="black"/>
+                                </Text>
+                            </View>
+                        </View>
+                    </TouchableOpacity>
+
+                    {/* Setting Stack*/}
+                    <TouchableOpacity onPress={() => navigation.navigate("SettingStack")}>
+                        <View style={styles.userProfileContent}>
+                            <View style={styles.profileIcon}>
+                                <Text>
+                                    <FontAwesome name="user-o" size={20} color="black"/>
+                                </Text>
+                            </View>
+                            <View style={styles.profileInfo}>
+                                <Text style={styles.profileInfoTitle}>Settings</Text>
+                            </View>
+                            <View style={styles.profileRightArrow}>
+                                <Text>
+                                    <MaterialIcons name="keyboard-arrow-right" size={24} color="black"/>
+                                </Text>
+                            </View>
+                        </View>
+                    </TouchableOpacity>
                 </ScrollView>
             </View>
         </SafeAreaView>
     );
 };
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
