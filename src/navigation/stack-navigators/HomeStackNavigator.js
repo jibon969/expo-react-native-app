@@ -3,13 +3,14 @@ import {Image, Platform, StyleSheet, Text, TouchableOpacity, View} from "react-n
 import {FontAwesome} from "@expo/vector-icons";
 import {createStackNavigator} from '@react-navigation/stack'
 import HomeScreen from '../../screens/HomeScreen';
+import UserProfileScreen from '../../screens/UserProfileScreen';
 
 
 const Stack = createStackNavigator();
 
 const HomeStackNavigator = () => {
 
-
+    //
     // const headerShow = (route) => {
     //     if (route === 'Welcome') {
     //         return false
@@ -46,7 +47,7 @@ const HomeStackNavigator = () => {
                         </Text>
                         <Text style={styles.headerSearchIcon}>
                             <TouchableOpacity style={styles.touchableButton}
-                                             onPress={()=>navigation.navigate('UserProfileStack')}>
+                                              onPress={() => navigation.navigate('UserProfileStack')}>
                                 <FontAwesome name="user" size={20} color="#fff"/>
                             </TouchableOpacity>
                         </Text>
@@ -64,6 +65,14 @@ const HomeStackNavigator = () => {
                             {/*<Image source={require('../../assets/headerLogo.png')} style={styles.headerImage}/>*/}
                             <Text style={{marginLeft: 5, fontSize: 20, color: "#fff"}}>Application</Text>
                         </View>
+                    }}
+                />
+                <Stack.Screen
+                    name="UserProfile"
+                    component={UserProfileScreen}
+                    options={{
+                        title: "User Profile",
+                        headerTitleAlign: 'left',
                     }}
                 />
             </>
