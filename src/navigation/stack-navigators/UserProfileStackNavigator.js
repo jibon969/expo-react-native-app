@@ -3,6 +3,7 @@ import {createStackNavigator} from '@react-navigation/stack'
 import {Platform, StyleSheet, Text, TouchableOpacity, View} from "react-native";
 import {FontAwesome, Ionicons} from "@expo/vector-icons";
 import UserProfileScreen from "../../screens/UserProfileScreen";
+import PersonalInfoScreen from "../../screens/PersonalInfoScreen";
 
 const Stack = createStackNavigator();
 
@@ -31,7 +32,7 @@ const UserProfileStackNavigator = () => {
                         </Text>
                         <Text style={styles.headerSearchIcon}>
                             <TouchableOpacity
-                                onPress={() => navigation.goBack()}
+                                onPress={() => navigation.navigate('UserProfileStack')}
                                 style={styles.touchableButton}>
                                 <FontAwesome name="user" size={20} color="#fff"/>
                             </TouchableOpacity>
@@ -46,6 +47,15 @@ const UserProfileStackNavigator = () => {
                 // Custom title
                 options={{
                     title: "User Profile",
+                    headerTitleAlign: 'left',
+                }}
+            />
+            {/*PersonalInfo*/}
+            <Stack.Screen
+                name="PersonalInfo"
+                component={PersonalInfoScreen}
+                options={{
+                    title: "User Details",
                     headerTitleAlign: 'left',
                 }}
             />
