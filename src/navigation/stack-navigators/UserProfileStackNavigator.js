@@ -3,8 +3,6 @@ import {createStackNavigator} from '@react-navigation/stack'
 import {Platform, StyleSheet, Text, TouchableOpacity, View} from "react-native";
 import {FontAwesome, Ionicons} from "@expo/vector-icons";
 import UserProfileScreen from "../../screens/UserProfileScreen";
-import PersonalInfoScreen from "../../screens/PersonalInfoScreen";
-
 const Stack = createStackNavigator();
 
 
