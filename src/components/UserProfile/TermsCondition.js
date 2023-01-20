@@ -1,6 +1,6 @@
 import {View, StyleSheet, Text} from 'react-native'
 
-const Setting = () => {
+const TermsCondition = () => {
     return (
         <View style={styles.container}>
             <View style={styles.contact}>
@@ -31,4 +31,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default Setting;
+export default TermsCondition;

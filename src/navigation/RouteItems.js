@@ -1,6 +1,7 @@
 import * as React from 'react'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import SettingStackNavigator from "./stack-navigators/SettingStackNavigator";
+import TermsConditionStackNavigator from "./stack-navigators/TermsConditionStackNavigator";
 
 export const screens = {
     HomeTab: 'HomeTab',
@@ -17,6 +18,9 @@ export const screens = {
 
     SettingStack: 'SettingStack',
     Setting: 'Setting',
+
+    TermsConditionStack: 'TermsConditionStack',
+    TermsCondition: 'TermsCondition',
 
     ReturnPolicyStack: 'ReturnPolicyStack',
     ReturnPolicy: 'ReturnPolicy',
@@ -134,6 +138,22 @@ export const routes = [
         name: screens.ReturnPolicy,
         focusedRoute: screens.ReturnPolicyStack,
         title: 'Return Policy',
+        showInTab: false,
+        showInDrawer: false,
+    },
+
+    // TermsConditionStack ============================================
+    {
+        name: screens.TermsConditionStack,
+        focusedRoute: screens.TermsCondition,
+        title: 'Terms & Condition',
+        showInTab: false,
+        showInDrawer: true,
+    },
+    {
+        name: screens.TermsCondition,
+        focusedRoute: screens.TermsConditionStack,
+        title: 'Terms & Condition',
         showInTab: false,
         showInDrawer: false,
     },
