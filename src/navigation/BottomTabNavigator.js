@@ -4,8 +4,11 @@ import {Text, StyleSheet, View} from 'react-native'
 import {routes, screens} from './RouteItems'
 import HomeStackNavigator from './stack-navigators/HomeStackNavigator'
 import ContactStackNavigator from './stack-navigators/ContactStackNavigator'
+
+// User Profile Stack
 import UserProfileStackNavigator from './stack-navigators/UserProfileStackNavigator'
 import PersonalInfoStackNavigator from './stack-navigators/PersonalInfoStackNavigator'
+import ReturnPolicyStackNavigator from './stack-navigators/ReturnPolicyStackNavigator'
 import SettingStackNavigator from './stack-navigators/SettingStackNavigator'
 
 const Tab = createBottomTabNavigator();
@@ -41,6 +44,7 @@ const BottomTabNavigator = () => {
             <Tab.Screen name={screens.ContactStack} component={ContactStackNavigator}/>
             <Tab.Screen name={screens.UserProfileStack} component={UserProfileStackNavigator}/>
             <Tab.Screen name={screens.PersonalInfoStack} component={PersonalInfoStackNavigator}/>
+            <Tab.Screen name={screens.ReturnPolicyStack} component={ReturnPolicyStackNavigator}/>
             <Tab.Screen name={screens.SettingStack} component={SettingStackNavigator}/>
         </Tab.Navigator>
     )

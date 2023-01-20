@@ -18,6 +18,9 @@ export const screens = {
     SettingStack: 'SettingStack',
     Setting: 'Setting',
 
+    ReturnPolicyStack: 'ReturnPolicyStack',
+    ReturnPolicy: 'ReturnPolicy',
+
 
 };
 
@@ -115,6 +118,22 @@ export const routes = [
         name: screens.Setting,
         focusedRoute: screens.SettingStack,
         title: 'Setting',
+        showInTab: false,
+        showInDrawer: false,
+    },
+
+    // ReturnPolicyStack ===========================================================
+    {
+        name: screens.ReturnPolicyStack,
+        focusedRoute: screens.ReturnPolicy,
+        title: 'Return Policy',
+        showInTab: false,
+        showInDrawer: true,
+    },
+    {
+        name: screens.ReturnPolicy,
+        focusedRoute: screens.ReturnPolicyStack,
+        title: 'Return Policy',
         showInTab: false,
         showInDrawer: false,
     },
