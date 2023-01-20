@@ -1,5 +1,6 @@
 import * as React from 'react'
 import Icon from 'react-native-vector-icons/FontAwesome'
+import SettingStackNavigator from "./stack-navigators/SettingStackNavigator";
 
 export const screens = {
     HomeTab: 'HomeTab',
@@ -13,6 +14,11 @@ export const screens = {
 
     PersonalInfoStack: 'PersonalInfoStack',
     PersonalInfo: 'PersonalInfo',
+
+    SettingStack: 'SettingStack',
+    Setting: 'Setting',
+
+
 };
 
 export const routes = [
@@ -93,6 +99,22 @@ export const routes = [
         name: screens.PersonalInfo,
         focusedRoute: screens.PersonalInfoStack,
         title: 'PersonalInfo',
+        showInTab: false,
+        showInDrawer: false,
+    },
+
+    // SettingStack ===========================================================
+    {
+        name: screens.SettingStack,
+        focusedRoute: screens.Setting,
+        title: 'Setting',
+        showInTab: false,
+        showInDrawer: true,
+    },
+    {
+        name: screens.Setting,
+        focusedRoute: screens.SettingStack,
+        title: 'Setting',
         showInTab: false,
         showInDrawer: false,
     },
