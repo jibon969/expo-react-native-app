@@ -9,6 +9,7 @@ import ContactStackNavigator from './stack-navigators/ContactStackNavigator'
 import UserProfileStackNavigator from './stack-navigators/UserProfileStackNavigator'
 import PersonalInfoStackNavigator from './stack-navigators/PersonalInfoStackNavigator'
 import ReturnPolicyStackNavigator from './stack-navigators/ReturnPolicyStackNavigator'
+import TermsConditionStackNavigator from './stack-navigators/TermsConditionStackNavigator'
 import SettingStackNavigator from './stack-navigators/SettingStackNavigator'
 
 const Tab = createBottomTabNavigator();
@@ -45,6 +46,7 @@ const BottomTabNavigator = () => {
             <Tab.Screen name={screens.UserProfileStack} component={UserProfileStackNavigator}/>
             <Tab.Screen name={screens.PersonalInfoStack} component={PersonalInfoStackNavigator}/>
             <Tab.Screen name={screens.ReturnPolicyStack} component={ReturnPolicyStackNavigator}/>
+            <Tab.Screen name={screens.TermsConditionStack} component={TermsConditionStackNavigator}/>
             <Tab.Screen name={screens.SettingStack} component={SettingStackNavigator}/>
         </Tab.Navigator>
     )
