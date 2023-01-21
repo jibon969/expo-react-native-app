@@ -2,6 +2,7 @@ import * as React from 'react'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import SettingStackNavigator from "./stack-navigators/SettingStackNavigator";
 import TermsConditionStackNavigator from "./stack-navigators/TermsConditionStackNavigator";
+import SecurityPrivacyStackNavigator from "./stack-navigators/SecurityPrivacyStackNavigator";
 
 export const screens = {
     HomeTab: 'HomeTab',
@@ -18,6 +19,11 @@ export const screens = {
 
     SettingStack: 'SettingStack',
     Setting: 'Setting',
+
+
+
+    SecurityPrivacyStack: 'SecurityPrivacyStack',
+    SecurityPrivacy: 'SecurityPrivacy',
 
     TermsConditionStack: 'TermsConditionStack',
     TermsCondition: 'TermsCondition',
@@ -126,7 +132,7 @@ export const routes = [
         showInDrawer: false,
     },
 
-    // ReturnPolicyStack ===========================================================
+    // ReturnPolicyStack ==============================================
     {
         name: screens.ReturnPolicyStack,
         focusedRoute: screens.ReturnPolicy,
@@ -141,6 +147,23 @@ export const routes = [
         showInTab: false,
         showInDrawer: false,
     },
+
+    // SecurityPrivacyStack ============================================
+    {
+        name: screens.SecurityPrivacyStack,
+        focusedRoute: screens.SecurityPrivacy,
+        title: 'Security & Privacy',
+        showInTab: false,
+        showInDrawer: false,
+    },
+    {
+        name: screens.SecurityPrivacy,
+        focusedRoute: screens.SecurityPrivacyStack,
+        title: 'Security & Privacy',
+        showInTab: false,
+        showInDrawer: false,
+    },
+
 
     // TermsConditionStack ============================================
     {

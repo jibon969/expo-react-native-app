@@ -68,7 +68,27 @@ const UserProfileScreen = ({navigation}) => {
                             </View>
                         </View>
                     </TouchableOpacity>
-                    
+
+                    {/* SecurityPrivacy Stack */}
+                    <TouchableOpacity onPress={() => navigation.navigate("SecurityPrivacyStack")}>
+                        <View style={styles.userProfileContent}>
+                            <View style={styles.profileIcon}>
+                                <Text>
+                                    <FontAwesome name="user-o" size={20} color="black"/>
+                                </Text>
+                            </View>
+                            <View style={styles.profileInfo}>
+                                <Text style={styles.profileInfoTitle}>Security & Privacy</Text>
+                            </View>
+                            <View style={styles.profileRightArrow}>
+                                <Text>
+                                    <MaterialIcons name="keyboard-arrow-right" size={24} color="black"/>
+                                </Text>
+                            </View>
+                        </View>
+                    </TouchableOpacity>
+
+
                     {/* TermsCondition Stack */}
                     <TouchableOpacity onPress={() => navigation.navigate("TermsConditionStack")}>
                         <View style={styles.userProfileContent}>

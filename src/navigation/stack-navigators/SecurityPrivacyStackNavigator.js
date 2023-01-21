@@ -6,7 +6,7 @@ import {FontAwesome, Ionicons} from "@expo/vector-icons";
 const Stack = createStackNavigator();
 
 
-const ReturnPolicyStackNavigator = () => {
+const SecurityPrivacyStackNavigator = () => {
     return (
         <Stack.Navigator screenOptions={({navigation}) => ({
             headerShown: true,
@@ -78,4 +78,4 @@ const styles = StyleSheet.create({
         borderRadius:50
     }
 });
-export default ReturnPolicyStackNavigator
+export default SecurityPrivacyStackNavigator
