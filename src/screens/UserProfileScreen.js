@@ -49,9 +49,9 @@ const UserProfileScreen = ({navigation}) => {
                             </View>
                         </View>
                     </TouchableOpacity>
-
+                    
                     {/*Tracking My Parcel*/}
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate("TrackingMyParcelStack")}>
                         <View style={styles.userProfileContent}>
                             <View style={styles.profileIcon}>
                                 <Text>

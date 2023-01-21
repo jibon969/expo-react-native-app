@@ -3,6 +3,7 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 import SettingStackNavigator from "./stack-navigators/SettingStackNavigator";
 import TermsConditionStackNavigator from "./stack-navigators/TermsConditionStackNavigator";
 import SecurityPrivacyStackNavigator from "./stack-navigators/SecurityPrivacyStackNavigator";
+import TrackingMyParcelStackNavigator from "./stack-navigators/TrackingMyParcelStackNavigator";
 
 export const screens = {
     HomeTab: 'HomeTab',
@@ -15,8 +16,8 @@ export const screens = {
     PersonalInfoStack: 'PersonalInfoStack',
     PersonalInfo: 'PersonalInfo',
 
-    SettingStack: 'SettingStack',
-    Setting: 'Setting',
+    TrackingMyParcelStack: 'TrackingMyParcelStack',
+    TrackingMyParcel: 'TrackingMyParcel',
 
     SecurityPrivacyStack: 'SecurityPrivacyStack',
     SecurityPrivacy: 'SecurityPrivacy',
@@ -32,6 +33,9 @@ export const screens = {
 
     ContactStack: 'ContactStack',
     Contact: 'Contact',
+
+    SettingStack: 'SettingStack',
+    Setting: 'Setting',
 
 
 };
@@ -83,7 +87,7 @@ export const routes = [
         showInDrawer: false,
     },
 
-    // UserProfileStack ===========================================================
+    // UserProfileStack ==============================================
     {
         name: screens.PersonalInfoStack,
         focusedRoute: screens.PersonalInfo,
@@ -99,21 +103,23 @@ export const routes = [
         showInDrawer: false,
     },
 
-    // SettingStack ===========================================================
+
+    // TrackingMyParcelStack ==========================================
     {
-        name: screens.SettingStack,
-        focusedRoute: screens.Setting,
-        title: 'Setting',
+        name: screens.TrackingMyParcelStack,
+        focusedRoute: screens.TrackingMyParcel,
+        title: 'TrackingMyParcel',
         showInTab: false,
         showInDrawer: true,
     },
     {
-        name: screens.Setting,
-        focusedRoute: screens.SettingStack,
-        title: 'Setting',
+        name: screens.TrackingMyParcel,
+        focusedRoute: screens.TrackingMyParcelStack,
+        title: 'TrackingMyParcel',
         showInTab: false,
         showInDrawer: false,
     },
+
 
     // ReturnPolicyStack ==============================================
     {
@@ -198,5 +204,21 @@ export const routes = [
         showInDrawer: false,
         icon: (focused) =>
             <Icon name="phone" size={30} color={focused ? '#551E18' : '#000'}/>,
+    },
+
+    // SettingStack ===========================================================
+    {
+        name: screens.SettingStack,
+        focusedRoute: screens.Setting,
+        title: 'Setting',
+        showInTab: false,
+        showInDrawer: true,
+    },
+    {
+        name: screens.Setting,
+        focusedRoute: screens.SettingStack,
+        title: 'Setting',
+        showInTab: false,
+        showInDrawer: false,
     },
 ];
