@@ -49,7 +49,7 @@ const UserProfileScreen = ({navigation}) => {
                             </View>
                         </View>
                     </TouchableOpacity>
-                    
+
                     {/*Tracking My Parcel*/}
                     <TouchableOpacity onPress={() => navigation.navigate("TrackingMyParcelStack")}>
                         <View style={styles.userProfileContent}>
@@ -70,7 +70,7 @@ const UserProfileScreen = ({navigation}) => {
                     </TouchableOpacity>
 
                     {/*Order History*/}
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate("PurchaseHistoryStack")}>
                         <View style={styles.userProfileContent}>
                             <View style={styles.profileIcon}>
                                 <Text>

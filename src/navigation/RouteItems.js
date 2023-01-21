@@ -16,6 +16,9 @@ export const screens = {
     PersonalInfoStack: 'PersonalInfoStack',
     PersonalInfo: 'PersonalInfo',
 
+    PurchaseHistoryStack: 'PurchaseHistoryStack',
+    PurchaseHistory: 'PurchaseHistory',
+
     TrackingMyParcelStack: 'TrackingMyParcelStack',
     TrackingMyParcel: 'TrackingMyParcel',
 
@@ -87,7 +90,7 @@ export const routes = [
         showInDrawer: false,
     },
 
-    // UserProfileStack ==============================================
+    // PersonalInfoStack ==============================================
     {
         name: screens.PersonalInfoStack,
         focusedRoute: screens.PersonalInfo,
@@ -120,6 +123,21 @@ export const routes = [
         showInDrawer: false,
     },
 
+    // PurchaseHistoryStack ==========================================
+    {
+        name: screens.PurchaseHistoryStack,
+        focusedRoute: screens.PurchaseHistory,
+        title: 'PurchaseHistory',
+        showInTab: false,
+        showInDrawer: true,
+    },
+    {
+        name: screens.PurchaseHistory,
+        focusedRoute: screens.PurchaseHistoryStack,
+        title: 'PurchaseHistory',
+        showInTab: false,
+        showInDrawer: false,
+    },
 
     // ReturnPolicyStack ==============================================
     {
