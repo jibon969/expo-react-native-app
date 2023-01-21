@@ -8,8 +8,6 @@ export const screens = {
     HomeTab: 'HomeTab',
     HomeStack: 'HomeStack',
     Home: 'Home',
-    ContactStack: 'ContactStack',
-    Contact: 'Contact',
 
     UserProfileStack: 'UserProfileStack',
     UserProfile: 'UserProfile',
@@ -20,8 +18,6 @@ export const screens = {
     SettingStack: 'SettingStack',
     Setting: 'Setting',
 
-
-
     SecurityPrivacyStack: 'SecurityPrivacyStack',
     SecurityPrivacy: 'SecurityPrivacy',
 
@@ -30,6 +26,12 @@ export const screens = {
 
     ReturnPolicyStack: 'ReturnPolicyStack',
     ReturnPolicy: 'ReturnPolicy',
+
+    AboutStack: 'AboutStack',
+    About: 'About',
+
+    ContactStack: 'ContactStack',
+    Contact: 'Contact',
 
 
 };
@@ -64,25 +66,6 @@ export const routes = [
             <Icon name="home" size={30} color={focused ? '#551E18' : '#000'}/>,
     },
 
-    // ContactStack =============================================================
-    {
-        name: screens.ContactStack,
-        focusedRoute: screens.ContactStack,
-        title: 'Contact Us',
-        showInTab: true,
-        showInDrawer: false,
-        icon: (focused) =>
-            <Icon name="phone" size={30} color={focused ? '#551E18' : '#000'}/>,
-    },
-    {
-        name: screens.Contact,
-        focusedRoute: screens.ContactStack,
-        title: 'Contact Us',
-        showInTab: false,
-        showInDrawer: false,
-        icon: (focused) =>
-            <Icon name="phone" size={30} color={focused ? '#551E18' : '#000'}/>,
-    },
 
     // UserProfileStack ===========================================================
     {
@@ -171,7 +154,7 @@ export const routes = [
         focusedRoute: screens.TermsCondition,
         title: 'Terms & Condition',
         showInTab: false,
-        showInDrawer: true,
+        showInDrawer: false,
     },
     {
         name: screens.TermsCondition,
@@ -179,5 +162,41 @@ export const routes = [
         title: 'Terms & Condition',
         showInTab: false,
         showInDrawer: false,
+    },
+
+    // AboutStack ============================================
+    {
+        name: screens.AboutStack,
+        focusedRoute: screens.About,
+        title: 'About',
+        showInTab: false,
+        showInDrawer: false,
+    },
+    {
+        name: screens.About,
+        focusedRoute: screens.AboutStack,
+        title: 'About',
+        showInTab: false,
+        showInDrawer: false,
+    },
+
+    // ContactStack ========================================================
+    {
+        name: screens.ContactStack,
+        focusedRoute: screens.ContactStack,
+        title: 'Contact Us',
+        showInTab: false,
+        showInDrawer: false,
+        icon: (focused) =>
+            <Icon name="phone" size={30} color={focused ? '#551E18' : '#000'}/>,
+    },
+    {
+        name: screens.Contact,
+        focusedRoute: screens.ContactStack,
+        title: 'Contact Us',
+        showInTab: false,
+        showInDrawer: false,
+        icon: (focused) =>
+            <Icon name="phone" size={30} color={focused ? '#551E18' : '#000'}/>,
     },
 ];
