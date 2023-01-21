@@ -14,6 +14,9 @@ export const screens = {
     CallStack: 'CallStack',
     Call: 'Call',
 
+    BrandStack: 'BrandStack',
+    Brand: 'Brand',
+
     UserProfileStack: 'UserProfileStack',
     UserProfile: 'UserProfile',
 
@@ -77,8 +80,29 @@ export const routes = [
             <Icon name="home" size={30} color={focused ? '#551E18' : '#000'}/>,
     },
 
+    // Brand ==================================================
+    {
+        name: screens.BrandStack,
+        focusedRoute: screens.BrandStack,
+        title: 'Brands',
+        showInTab: true,
+        showInDrawer: false,
+        icon: (focused) =>
+            <Ionicons name="grid-sharp" size={focused ? 20 : 20} color={focused ? 'black' : '#969696'}/>,
+    },
+    {
+        name: screens.Brand,
+        focusedRoute: screens.BrandStack,
+        title: 'Brands',
+        showInTab: false,
+        showInDrawer: false,
 
-    //  CallStack ===========================================================
+        icon: (focused) =>
+            <Ionicons name="grid-sharp" size={focused ? 20 : 20} color={focused ? 'black' : '#969696'}/>,
+    },
+
+
+    //  CallStack =================================================
     {
         name: screens.CallStack,
         focusedRoute: screens.CallStack,
@@ -99,7 +123,7 @@ export const routes = [
     },
 
 
-    // UserProfileStack ===========================================================
+    // UserProfileStack =====================================
     {
         name: screens.UserProfileStack,
         focusedRoute: screens.UserProfileStack,
