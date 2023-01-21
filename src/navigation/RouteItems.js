@@ -1,14 +1,18 @@
 import * as React from 'react'
 import Icon from 'react-native-vector-icons/FontAwesome'
-import SettingStackNavigator from "./stack-navigators/SettingStackNavigator";
-import TermsConditionStackNavigator from "./stack-navigators/TermsConditionStackNavigator";
-import SecurityPrivacyStackNavigator from "./stack-navigators/SecurityPrivacyStackNavigator";
-import TrackingMyParcelStackNavigator from "./stack-navigators/TrackingMyParcelStackNavigator";
+import {FontAwesome} from '@expo/vector-icons';
+import {MaterialIcons} from '@expo/vector-icons';
+import {Ionicons} from '@expo/vector-icons';
+import {AntDesign} from '@expo/vector-icons';
+import {MaterialCommunityIcons} from '@expo/vector-icons';
 
 export const screens = {
     HomeTab: 'HomeTab',
     HomeStack: 'HomeStack',
     Home: 'Home',
+
+    CallStack: 'CallStack',
+    Call: 'Call',
 
     UserProfileStack: 'UserProfileStack',
     UserProfile: 'UserProfile',
@@ -74,10 +78,31 @@ export const routes = [
     },
 
 
+    //  CallStack ===========================================================
+    {
+        name: screens.CallStack,
+        focusedRoute: screens.CallStack,
+        title: 'Call Us',
+        showInTab: true,
+        showInDrawer: false,
+        icon: (focused) =>
+            <FontAwesome name="phone" size={focused ? 20 : 20} color={focused ? 'black' : '#969696'}/>
+    },
+    {
+        name: screens.Call,
+        focusedRoute: screens.CallStack,
+        title: 'Call Us',
+        showInTab: true,
+        showInDrawer: false,
+        icon: (focused) =>
+            <FontAwesome name="phone" size={focused ? 20 : 20} color={focused ? 'black' : '#969696'}/>
+    },
+
+
     // UserProfileStack ===========================================================
     {
         name: screens.UserProfileStack,
-        focusedRoute: screens.UserProfile,
+        focusedRoute: screens.UserProfileStack,
         title: 'User Profile',
         showInTab: false,
         showInDrawer: false,
@@ -93,7 +118,7 @@ export const routes = [
     // PersonalInfoStack ==============================================
     {
         name: screens.PersonalInfoStack,
-        focusedRoute: screens.PersonalInfo,
+        focusedRoute: screens.PersonalInfoStack,
         title: 'PersonalInfo',
         showInTab: false,
         showInDrawer: true,
@@ -110,7 +135,7 @@ export const routes = [
     // TrackingMyParcelStack ==========================================
     {
         name: screens.TrackingMyParcelStack,
-        focusedRoute: screens.TrackingMyParcel,
+        focusedRoute: screens.TrackingMyParcelStack,
         title: 'TrackingMyParcel',
         showInTab: false,
         showInDrawer: true,
@@ -126,7 +151,7 @@ export const routes = [
     // PurchaseHistoryStack ==========================================
     {
         name: screens.PurchaseHistoryStack,
-        focusedRoute: screens.PurchaseHistory,
+        focusedRoute: screens.PurchaseHistoryStack,
         title: 'PurchaseHistory',
         showInTab: false,
         showInDrawer: true,
@@ -142,7 +167,7 @@ export const routes = [
     // ReturnPolicyStack ==============================================
     {
         name: screens.ReturnPolicyStack,
-        focusedRoute: screens.ReturnPolicy,
+        focusedRoute: screens.ReturnPolicyStack,
         title: 'Return Policy',
         showInTab: false,
         showInDrawer: true,
@@ -158,7 +183,7 @@ export const routes = [
     // SecurityPrivacyStack ============================================
     {
         name: screens.SecurityPrivacyStack,
-        focusedRoute: screens.SecurityPrivacy,
+        focusedRoute: screens.SecurityPrivacyStack,
         title: 'Security & Privacy',
         showInTab: false,
         showInDrawer: false,
@@ -175,7 +200,7 @@ export const routes = [
     // TermsConditionStack ============================================
     {
         name: screens.TermsConditionStack,
-        focusedRoute: screens.TermsCondition,
+        focusedRoute: screens.TermsConditionStack,
         title: 'Terms & Condition',
         showInTab: false,
         showInDrawer: false,
@@ -191,7 +216,7 @@ export const routes = [
     // AboutStack ============================================
     {
         name: screens.AboutStack,
-        focusedRoute: screens.About,
+        focusedRoute: screens.AboutStack,
         title: 'About',
         showInTab: false,
         showInDrawer: false,
@@ -227,7 +252,7 @@ export const routes = [
     // SettingStack ===========================================================
     {
         name: screens.SettingStack,
-        focusedRoute: screens.Setting,
+        focusedRoute: screens.SettingStack,
         title: 'Setting',
         showInTab: false,
         showInDrawer: true,
