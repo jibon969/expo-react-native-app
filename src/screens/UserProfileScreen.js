@@ -27,7 +27,7 @@ const UserProfileScreen = ({navigation}) => {
                     />
                 </View>
                 <View style={styles.userProfileWrapper}>
-                    <Text style={styles.userProfileTitle}> Contact Number </Text>
+                    <Text style={styles.userProfileTitle}> User Profile </Text>
                 </View>
 
                 <ScrollView>
@@ -50,12 +50,50 @@ const UserProfileScreen = ({navigation}) => {
                         </View>
                     </TouchableOpacity>
 
-                    {/* Return Policy Stack */}
-                    <TouchableOpacity onPress={() => navigation.navigate("ReturnPolicyStack")}>
+                    {/*Tracking My Parcel*/}
+                    <TouchableOpacity>
                         <View style={styles.userProfileContent}>
                             <View style={styles.profileIcon}>
                                 <Text>
-                                    <FontAwesome name="user-o" size={20} color="black"/>
+                                    <MaterialIcons name="local-shipping" size={24} color="black"/>
+                                </Text>
+                            </View>
+                            <View style={styles.profileInfo}>
+                                <Text style={styles.profileInfoTitle}>Tracking My Parcel</Text>
+                            </View>
+                            <View style={styles.profileRightArrow}>
+                                <Text>
+                                    <MaterialIcons name="keyboard-arrow-right" size={24} color="black"/>
+                                </Text>
+                            </View>
+                        </View>
+                    </TouchableOpacity>
+
+                    {/*Order History*/}
+                    <TouchableOpacity>
+                        <View style={styles.userProfileContent}>
+                            <View style={styles.profileIcon}>
+                                <Text>
+                                    <MaterialIcons name="history" size={24} color="black"/>
+                                </Text>
+                            </View>
+                            <View style={styles.profileInfo}>
+                                <Text style={styles.profileInfoTitle}>Purchase History</Text>
+                            </View>
+                            <View style={styles.profileRightArrow}>
+                                <Text>
+                                    <MaterialIcons name="keyboard-arrow-right" size={24} color="black"/>
+                                </Text>
+                            </View>
+                        </View>
+                    </TouchableOpacity>
+
+                    {/*Return Policy*/}
+                    <TouchableOpacity onPress={() => navigation.navigate("Return Policy")}>
+                        <View style={styles.userProfileContent}>
+                            <View style={styles.profileIcon}>
+                                <Text>
+                                    <MaterialIcons name="read-more" size={24} color="black"/>
                                 </Text>
                             </View>
                             <View style={styles.profileInfo}>
@@ -69,12 +107,12 @@ const UserProfileScreen = ({navigation}) => {
                         </View>
                     </TouchableOpacity>
 
-                    {/* SecurityPrivacy Stack */}
+                    {/*Security & Privacy*/}
                     <TouchableOpacity onPress={() => navigation.navigate("SecurityPrivacyStack")}>
                         <View style={styles.userProfileContent}>
                             <View style={styles.profileIcon}>
                                 <Text>
-                                    <FontAwesome name="user-o" size={20} color="black"/>
+                                    <MaterialIcons name="read-more" size={24} color="black"/>
                                 </Text>
                             </View>
                             <View style={styles.profileInfo}>
@@ -88,17 +126,54 @@ const UserProfileScreen = ({navigation}) => {
                         </View>
                     </TouchableOpacity>
 
-
-                    {/* TermsCondition Stack */}
+                    {/*Terms & Conditions*/}
                     <TouchableOpacity onPress={() => navigation.navigate("TermsConditionStack")}>
                         <View style={styles.userProfileContent}>
                             <View style={styles.profileIcon}>
                                 <Text>
-                                    <FontAwesome name="user-o" size={20} color="black"/>
+                                    <MaterialIcons name="read-more" size={24} color="black"/>
                                 </Text>
                             </View>
                             <View style={styles.profileInfo}>
-                                <Text style={styles.profileInfoTitle}>Terms & Condition</Text>
+                                <Text style={styles.profileInfoTitle}>Terms & Conditions</Text>
+                            </View>
+                            <View style={styles.profileRightArrow}>
+                                <Text>
+                                    <MaterialIcons name="keyboard-arrow-right" size={24} color="black"/>
+                                </Text>
+                            </View>
+                        </View>
+                    </TouchableOpacity>
+
+                    {/*Support or Contact Us*/}
+                    <TouchableOpacity onPress={() => navigation.navigate("ContactStack")}>
+                        <View style={styles.userProfileContent}>
+                            <View style={styles.profileIcon}>
+                                <Text>
+                                    <AntDesign name="contacts" size={24} color="black"/>
+                                </Text>
+                            </View>
+                            <View style={styles.profileInfo}>
+                                <Text style={styles.profileInfoTitle}>Contact Us</Text>
+                            </View>
+                            <View style={styles.profileRightArrow}>
+                                <Text>
+                                    <MaterialIcons name="keyboard-arrow-right" size={24} color="black"/>
+                                </Text>
+                            </View>
+                        </View>
+                    </TouchableOpacity>
+
+                    {/*About Us*/}
+                    <TouchableOpacity onPress={() => navigation.navigate("AboutStack")}>
+                        <View style={styles.userProfileContent}>
+                            <View style={styles.profileIcon}>
+                                <Text>
+                                    <MaterialIcons name="read-more" size={24} color="black"/>
+                                </Text>
+                            </View>
+                            <View style={styles.profileInfo}>
+                                <Text style={styles.profileInfoTitle}>About Us</Text>
                             </View>
                             <View style={styles.profileRightArrow}>
                                 <Text>
@@ -113,7 +188,7 @@ const UserProfileScreen = ({navigation}) => {
                         <View style={styles.userProfileContent}>
                             <View style={styles.profileIcon}>
                                 <Text>
-                                    <FontAwesome name="user-o" size={20} color="black"/>
+                                    <AntDesign name="setting" size={24} color="black"/>
                                 </Text>
                             </View>
                             <View style={styles.profileInfo}>

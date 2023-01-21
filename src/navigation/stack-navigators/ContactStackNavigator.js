@@ -16,7 +16,7 @@ const ContactStackNavigator = () => {
                 height: 50
             },
             headerLeft: () => (
-                <TouchableOpacity onPress={() => navigation.goBack()} style={styles.headerLeft}>
+                <TouchableOpacity onPress={()=>navigation.navigate('UserProfileStack')}>
                     <Ionicons name="arrow-back-outline" size={25} color="#fff" style={{padding: 5}}/>
                 </TouchableOpacity>
             ),
@@ -37,7 +37,14 @@ const ContactStackNavigator = () => {
                 </View>
             ),
         })}>
-            <Stack.Screen name="Contact" component={Contact}/>
+            <Stack.Screen
+                name="Contact"
+                options={{
+                    title: "Contact Us",
+                    headerTitleAlign: 'left',
+                }}
+                component={Contact}
+            />
         </Stack.Navigator>
     )
 };

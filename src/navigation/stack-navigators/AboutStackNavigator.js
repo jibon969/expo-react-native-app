@@ -1,12 +1,12 @@
 import React from 'react'
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native'
 import {createStackNavigator} from '@react-navigation/stack'
-import SecurityPrivacyScreen from '../../screens/SecurityPrivacyScreen'
+import AboutScreen from '../../screens/AboutScreen'
 import {FontAwesome, Ionicons} from "@expo/vector-icons";
 const Stack = createStackNavigator();
 
 
-const SecurityPrivacyStackNavigator = () => {
+const AboutStackNavigator = () => {
     return (
         <Stack.Navigator screenOptions={({navigation}) => ({
             headerShown: true,
@@ -16,7 +16,7 @@ const SecurityPrivacyStackNavigator = () => {
                 height: 50
             },
             headerLeft: () => (
-                <TouchableOpacity onPress={()=>navigation.navigate('UserProfileStack')} style={styles.headerLeft}>
+                <TouchableOpacity onPress={() => navigation.goBack()} style={styles.headerLeft}>
                     <Ionicons name="arrow-back-outline" size={25} color="#fff" style={{padding: 5}}/>
                 </TouchableOpacity>
             ),
@@ -38,12 +38,12 @@ const SecurityPrivacyStackNavigator = () => {
             ),
         })}>
             <Stack.Screen
-                name="SecurityPrivacy"
+                name="About"
                 options={{
-                    title: "Security & Privacy",
+                    title: "About Us",
                     headerTitleAlign: 'left',
                 }}
-                component={SecurityPrivacyScreen}
+                component={AboutScreen}
             />
         </Stack.Navigator>
     )
@@ -78,4 +78,4 @@ const styles = StyleSheet.create({
         borderRadius:50
     }
 });
-export default SecurityPrivacyStackNavigator
+export default AboutStackNavigator
