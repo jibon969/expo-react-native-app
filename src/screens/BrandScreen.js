@@ -1,10 +1,10 @@
 import {StyleSheet, SafeAreaView} from 'react-native'
 import Brand from '../../src/components/Brand/Brand'
 
-const BrandScreen = () => {
+const BrandScreen = ({navigation}) => {
     return (
         <SafeAreaView style={styles.contactArea}>
-            <Brand/>
+            <Brand navigation={navigation}/>
         </SafeAreaView>
     )
 };

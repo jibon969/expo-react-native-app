@@ -4,7 +4,8 @@ import {
     StyleSheet,
     Platform,
     ScrollView,
-    Text
+    Text,
+    TouchableOpacity
 } from 'react-native';
 
 
@@ -14,7 +15,9 @@ const CategoryScreen = ({navigation}) => {
             <View style={styles.container}>
                 <ScrollView>
                     <View style={styles.category}>
-                        <Text>Coming...</Text>
+                        <TouchableOpacity onPress={()=> navigation.navigate("ProductDetailStack")}>
+                            <Text>Go to detail page</Text>
+                        </TouchableOpacity>
                     </View>
                 </ScrollView>
             </View>
