@@ -1,13 +1,14 @@
 import React from 'react'
-import {StyleSheet, TouchableOpacity, View, Text} from "react-native";
-import {FontAwesome, Ionicons} from "@expo/vector-icons";
 import {createStackNavigator} from '@react-navigation/stack'
-import CartScreen from '../../screens/CartScreen'
+import {FontAwesome, Ionicons} from "@expo/vector-icons";
+import CheckoutScreen from '../../screens/CheckoutScreen'
+import {StyleSheet, TouchableOpacity, View, Text} from "react-native";
+
 
 const Stack = createStackNavigator();
 
 
-const CartStackNavigator = () => {
+const CheckoutStackNavigator = () => {
     return (
         <Stack.Navigator screenOptions={({navigation}) => ({
             headerShown: true,
@@ -40,11 +41,18 @@ const CartStackNavigator = () => {
             ),
         })}>
             <Stack.Screen
-                name="Cart"
-                component={CartScreen}
+                name="Checkout"
+                component={CheckoutScreen}
                 options={{
-                    title: "Cart",
+                    title: "Checkout",
                     headerTitleAlign: 'left',
+                    headerStyle: {
+                        backgroundColor: "#551E18",
+                    },
+                    headerTintColor: '#FFF',
+                    headerTitleStyle: {
+                        fontWeight: 'bold',
+                    },
                 }}
             />
         </Stack.Navigator>
@@ -70,15 +78,15 @@ const styles = StyleSheet.create({
     headerUserIcon: {
         marginLeft: 20
     },
-    touchableButton: {
+    touchableButton:{
         backgroundColor: "#551E18",
         overflow: "hidden",
-        paddingLeft: 5,
-        paddingRight: 5,
-        paddingTop: 3,
-        padding: 3,
-        borderRadius: 50
+        paddingLeft:5,
+        paddingRight:5,
+        paddingTop:3,
+        padding:3,
+        borderRadius:50
     }
 });
 
-export default CartStackNavigator
+export default CheckoutStackNavigator

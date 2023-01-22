@@ -29,7 +29,7 @@ const CartScreen = ({navigation}) => {
                     </View>
                 </View>
                 {/*Proceed to Order*/}
-                <TouchableOpacity>
+                <TouchableOpacity onPress={()=>navigation.navigate('CheckoutStack')}>
                     <View style={styles.proceedOrder}>
                         <Text style={styles.proceedOrderTitle}>Proceed to Order </Text>
                     </View>

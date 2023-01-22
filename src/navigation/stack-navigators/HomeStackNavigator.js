@@ -4,6 +4,8 @@ import {FontAwesome} from "@expo/vector-icons";
 import {createStackNavigator} from '@react-navigation/stack'
 import HomeScreen from '../../screens/HomeScreen';
 import UserProfileScreen from '../../screens/UserProfileScreen';
+import CartScreen from '../../screens/CartScreen';
+import CheckoutScreen from '../../screens/CheckoutScreen';
 
 
 const Stack = createStackNavigator();
