@@ -98,7 +98,7 @@ const CheckoutForm = ({navigation}) => {
                 </View>
             </View>
             {/*<Text style={styles.placeAnOrder}>Loading...</Text>*/}
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=> navigation.navigate("InvoiceStack")}>
                 <Text style={styles.placeAnOrder}>Place your order</Text>
             </TouchableOpacity>
             <View style={{marginBottom: 50}}/>
