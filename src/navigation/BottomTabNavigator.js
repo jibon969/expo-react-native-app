@@ -6,6 +6,7 @@ import HomeStackNavigator from './stack-navigators/HomeStackNavigator'
 import CategoryStackNavigator from './stack-navigators/CategoryStackNavigator'
 import BrandStackNavigator from './stack-navigators/BrandStackNavigator'
 import SearchStackNavigator from './stack-navigators/SearchStackNavigator'
+import ProductListStackNavigator from './stack-navigators/ProductListStackNavigator'
 import CallStackNavigator from './stack-navigators/CallStackNavigator'
 import CartStackNavigator from './stack-navigators/CartStackNavigator'
 import CheckoutStackNavigator from './stack-navigators/CheckoutStackNavigator'
@@ -57,6 +58,7 @@ const BottomTabNavigator = () => {
             <Tab.Screen name={screens.BrandStack} component={BrandStackNavigator}/>
             <Tab.Screen name={screens.CategoryStack} component={CategoryStackNavigator}/>
             <Tab.Screen name={screens.SearchStack} component={SearchStackNavigator}/>
+            <Tab.Screen name={screens.ProductListStack} component={ProductListStackNavigator}/>
             <Tab.Screen name={screens.CallStack} component={CallStackNavigator}/>
             <Tab.Screen name={screens.CartStack} component={CartStackNavigator}/>
             <Tab.Screen name={screens.CheckoutStack} component={CheckoutStackNavigator}/>

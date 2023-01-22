@@ -20,6 +20,9 @@ export const screens = {
     SearchStack: 'SearchStack',
     Search: 'Search',
 
+    ProductListStack: 'ProductListStack',
+    ProductList: 'ProductList',
+
     CartStack: 'CartStack',
     Cart: 'Cart',
 
@@ -151,6 +154,26 @@ export const routes = [
         title: 'Search',
         showInTab: false,
         showInDrawer: false,
+    },
+
+    // ProductList Stack ==================================================
+    {
+        name: screens.ProductListStack,
+        focusedRoute: screens.ProductListStack,
+        title: 'ProductList',
+        showInTab: false,
+        showInDrawer: false,
+        icon: (focused) =>
+            <Ionicons name="grid-sharp" size={focused ? 20 : 20} color={focused ? 'black' : '#969696'}/>,
+    },
+    {
+        name: screens.ProductList,
+        focusedRoute: screens.ProductListStack,
+        title: 'ProductList',
+        showInTab: false,
+        showInDrawer: false,
+        icon: (focused) =>
+            <Ionicons name="grid-sharp" size={focused ? 20 : 20} color={focused ? 'black' : '#969696'}/>,
     },
 
     //  CartStack =================================================
