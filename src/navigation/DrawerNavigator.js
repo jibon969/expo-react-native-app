@@ -51,7 +51,7 @@ const CustomDrawerContent = (props) => {
             />
 
             {/*Offer*/}
-            <DrawerItem
+            <DrawerItem onPress={() => props.navigation.navigate('ProductListStack')}
                 label={() => (
                     <Text style={styles.drawerLabel2}>
                         Offers
