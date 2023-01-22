@@ -1,13 +1,10 @@
-import {View, StyleSheet, Text, TouchableOpacity} from 'react-native'
+import {View, StyleSheet, Text} from 'react-native'
 
-const ProductList = ({navigation}) => {
+const ProductDetail = () => {
     return (
         <View style={styles.contactContainer}>
             <View style={styles.contact}>
-                <Text style={styles.contactTitle}>Hello, Product List </Text>
-                <TouchableOpacity onPress={()=> navigation.navigate("ProductDetailStack")}>
-                    <Text style={{margin:10, textAlign:"center", fontWeight:"bold"}}>Go to Details Page</Text>
-                </TouchableOpacity>
+                <Text style={styles.contactTitle}>Hello, Product Detail </Text>
             </View>
         </View>
     )
@@ -31,8 +28,7 @@ const styles = StyleSheet.create({
     },
     contactTitle:{
         textAlign:"center"
-    },
-
+    }
 });
 
-export default ProductList;
+export default ProductDetail;

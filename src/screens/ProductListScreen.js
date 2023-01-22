@@ -1,10 +1,10 @@
-import {StyleSheet, SafeAreaView} from 'react-native'
+import {StyleSheet, SafeAreaView, TouchableOpacity} from 'react-native'
 import ProductList from '../../src/components/ProductList/ProductList'
 
-const ProductListScreen = () => {
+const ProductListScreen = ({navigation}) => {
     return (
         <SafeAreaView style={styles.contactArea}>
-            <ProductList/>
+            <ProductList navigation={navigation} />
         </SafeAreaView>
     )
 };
