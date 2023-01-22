@@ -11,6 +11,9 @@ export const screens = {
     HomeStack: 'HomeStack',
     Home: 'Home',
 
+    CategoryStack: 'CategoryStack',
+    Category: 'Category',
+
     CartStack: 'CartStack',
     Cart: 'Cart',
 
@@ -88,6 +91,28 @@ export const routes = [
         icon: (focused) =>
             <Icon name="home" size={30} color={focused ? '#551E18' : '#000'}/>,
     },
+
+
+    // CategoryStack ==================================================
+    {
+        name: screens.CategoryStack,
+        focusedRoute: screens.CategoryStack,
+        title: 'Category',
+        showInTab: true,
+        showInDrawer: false,
+        icon: (focused) =>
+            <MaterialIcons name="grid-on" size={focused ? 20 : 20} color={focused ? 'black' : '#969696'}/>
+    },
+    {
+        name: screens.Brand,
+        focusedRoute: screens.CategoryStack,
+        title: 'Category',
+        showInTab: true,
+        showInDrawer: false,
+        icon: (focused) =>
+            <MaterialIcons name="grid-on" size={focused ? 20 : 20} color={focused ? 'black' : '#969696'}/>
+    },
+
 
     // Brand ==================================================
     {
