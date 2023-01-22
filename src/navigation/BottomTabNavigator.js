@@ -3,6 +3,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 import {Text, StyleSheet, View} from 'react-native'
 import {routes, screens} from './RouteItems'
 import HomeStackNavigator from './stack-navigators/HomeStackNavigator'
+import CategoryStackNavigator from './stack-navigators/CategoryStackNavigator'
 import BrandStackNavigator from './stack-navigators/BrandStackNavigator'
 import CallStackNavigator from './stack-navigators/CallStackNavigator'
 import CartStackNavigator from './stack-navigators/CartStackNavigator'
@@ -53,6 +54,7 @@ const BottomTabNavigator = () => {
         <Tab.Navigator screenOptions={tabOptions}>
             <Tab.Screen name={screens.HomeStack} component={HomeStackNavigator}/>
             <Tab.Screen name={screens.BrandStack} component={BrandStackNavigator}/>
+            <Tab.Screen name={screens.CategoryStack} component={CategoryStackNavigator}/>
             <Tab.Screen name={screens.CallStack} component={CallStackNavigator}/>
             <Tab.Screen name={screens.CartStack} component={CartStackNavigator}/>
             <Tab.Screen name={screens.CheckoutStack} component={CheckoutStackNavigator}/>
