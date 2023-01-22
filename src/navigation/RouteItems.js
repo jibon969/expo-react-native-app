@@ -14,6 +14,12 @@ export const screens = {
     CategoryStack: 'CategoryStack',
     Category: 'Category',
 
+    BrandStack: 'BrandStack',
+    Brand: 'Brand',
+
+    SearchStack: 'SearchStack',
+    Search: 'Search',
+
     CartStack: 'CartStack',
     Cart: 'Cart',
 
@@ -25,9 +31,6 @@ export const screens = {
 
     CallStack: 'CallStack',
     Call: 'Call',
-
-    BrandStack: 'BrandStack',
-    Brand: 'Brand',
 
     UserProfileStack: 'UserProfileStack',
     UserProfile: 'UserProfile',
@@ -130,9 +133,24 @@ export const routes = [
         title: 'Brands',
         showInTab: false,
         showInDrawer: false,
-
         icon: (focused) =>
             <Ionicons name="grid-sharp" size={focused ? 20 : 20} color={focused ? 'black' : '#969696'}/>,
+    },
+
+    // SearchStack ==================================================
+    {
+        name: screens.SearchStack,
+        focusedRoute: screens.SearchStack,
+        title: 'Search',
+        showInTab: false,
+        showInDrawer: false
+    },
+    {
+        name: screens.Search,
+        focusedRoute: screens.SearchStack,
+        title: 'Search',
+        showInTab: false,
+        showInDrawer: false,
     },
 
     //  CartStack =================================================

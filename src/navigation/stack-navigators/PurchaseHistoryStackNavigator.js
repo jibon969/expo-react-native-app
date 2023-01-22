@@ -24,7 +24,7 @@ const PurchaseHistoryStackNavigator = () => {
                 <View style={styles.headerRight}>
                     <View style={styles.headerContent}>
                         <Text style={styles.headerSearchIcon}>
-                            <TouchableOpacity style={styles.touchableButton}>
+                            <TouchableOpacity onPress={()=> navigation.navigate("SearchStack")} style={styles.touchableButton}>
                                 <FontAwesome name="search" size={20} color="#fff"/>
                             </TouchableOpacity>
                         </Text>
