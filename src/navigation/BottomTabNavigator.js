@@ -5,6 +5,7 @@ import {routes, screens} from './RouteItems'
 import HomeStackNavigator from './stack-navigators/HomeStackNavigator'
 import BrandStackNavigator from './stack-navigators/BrandStackNavigator'
 import CallStackNavigator from './stack-navigators/CallStackNavigator'
+import CartStackNavigator from './stack-navigators/CartStackNavigator'
 
 
 // User Profile Stack
@@ -51,6 +52,7 @@ const BottomTabNavigator = () => {
             <Tab.Screen name={screens.HomeStack} component={HomeStackNavigator}/>
             <Tab.Screen name={screens.BrandStack} component={BrandStackNavigator}/>
             <Tab.Screen name={screens.CallStack} component={CallStackNavigator}/>
+            <Tab.Screen name={screens.CartStack} component={CartStackNavigator}/>
             <Tab.Screen name={screens.UserProfileStack} component={UserProfileStackNavigator}/>
             <Tab.Screen name={screens.PersonalInfoStack} component={PersonalInfoStackNavigator}/>
             <Tab.Screen name={screens.TrackingMyParcelStack} component={TrackingMyParcelStackNavigator}/>
