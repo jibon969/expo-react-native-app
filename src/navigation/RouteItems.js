@@ -11,6 +11,9 @@ export const screens = {
     HomeStack: 'HomeStack',
     Home: 'Home',
 
+    CartStack: 'CartStack',
+    Cart: 'Cart',
+
     CallStack: 'CallStack',
     Call: 'Call',
 
@@ -99,6 +102,26 @@ export const routes = [
 
         icon: (focused) =>
             <Ionicons name="grid-sharp" size={focused ? 20 : 20} color={focused ? 'black' : '#969696'}/>,
+    },
+
+    //  CartStack =================================================
+    {
+        name: screens.CartStack,
+        focusedRoute: screens.CartStack,
+        title: 'Cart',
+        showInTab: true,
+        showInDrawer: false,
+        icon: (focused) =>
+            <FontAwesome name="shopping-cart" size={focused ? 20 : 20} color={focused ? 'black' : '#969696'}/>,
+    },
+    {
+        name: screens.Cart,
+        focusedRoute: screens.CartStack,
+        title: 'Cart',
+        showInTab: true,
+        showInDrawer: false,
+        icon: (focused) =>
+            <FontAwesome name="shopping-cart" size={focused ? 20 : 20} color={focused ? 'black' : '#969696'}/>,
     },
 
 
