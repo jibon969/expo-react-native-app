@@ -41,7 +41,7 @@ const PersonalInfoStackNavigator = () => {
                 name="PersonalInfo"
                 component={PersonalInfoScreen}
                 options={{
-                    title: "User Details",
+                    title: "Personal Info",
                     headerTitleAlign: 'left',
                 }}
             />

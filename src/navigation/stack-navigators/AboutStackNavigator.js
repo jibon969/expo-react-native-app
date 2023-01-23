@@ -16,7 +16,7 @@ const AboutStackNavigator = () => {
                 height: 50
             },
             headerLeft: () => (
-                <TouchableOpacity onPress={() => navigation.goBack()} style={styles.headerLeft}>
+                <TouchableOpacity onPress={()=>navigation.navigate('UserProfileStack')} style={styles.headerLeft}>
                     <Ionicons name="arrow-back-outline" size={25} color="#fff" style={{padding: 5}}/>
                 </TouchableOpacity>
             ),
