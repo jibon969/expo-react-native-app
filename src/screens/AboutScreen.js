@@ -30,7 +30,6 @@ const AboutScreen = () => {
                         :
                         <AboutUs about={about}/>
                 }
-
             </SafeAreaView>
         )
     }
