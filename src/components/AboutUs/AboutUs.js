@@ -1,22 +1,25 @@
-import {View, StyleSheet, Text} from 'react-native'
+import {View, StyleSheet, Text, ScrollView} from 'react-native'
 
-const AboutUs = () => {
+const AboutUs = ({about}) => {
+
     return (
-        <View style={styles.contactContainer}>
-            <View style={styles.contact}>
-                <Text style={styles.contactTitle}>Hello, AboutUs </Text>
-            </View>
+        <View style={styles.aboutUs}>
+            <ScrollView>
+                {
+                    about.map((data, index) => (
+                        <View style={styles.aboutUsMargin} key={index}>
+                            <Text style={{textAlign:"justify", lineHeight:25}}>{data?.row_description}</Text>
+                        </View>
+                    ))
+                }
+            </ScrollView>
         </View>
     )
 };
 
 const styles = StyleSheet.create({
-    contactContainer: {
+    aboutUs: {
         flex: 1,
-    },
-    contact: {
-        flex: 1,
-        padding:5,
         ...Platform.select({
             ios: {
                 marginBottom: "0%"
@@ -26,9 +29,9 @@ const styles = StyleSheet.create({
             }
         })
     },
-    contactTitle:{
-        textAlign:"center"
-    }
+    aboutUsMargin: {
+        margin: 15
+    },
 });
 
 export default AboutUs;

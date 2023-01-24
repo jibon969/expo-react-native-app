@@ -1,11 +1,17 @@
-import {View, StyleSheet, Text} from 'react-native'
+import {View, StyleSheet, Text, TouchableOpacity} from 'react-native'
+import {Octicons} from '@expo/vector-icons';
 
-const Setting = () => {
+const Setting = ({navigation}) => {
     return (
         <View style={styles.container}>
-            <View style={styles.contact}>
-                <Text style={styles.homeTitle}>Hello, I am Setting </Text>
-            </View>
+            <TouchableOpacity style={styles.onPressBtn} onPress={()=>navigation.navigate("HomeStack")}>
+                <View style={styles.logout}>
+                    <Text>
+                        <Octicons name="sign-in" size={20} color="black"/>
+                    </Text>
+                    <Text style={styles.logoutTitle}> Logout</Text>
+                </View>
+            </TouchableOpacity>
         </View>
     )
 };
@@ -13,21 +19,20 @@ const Setting = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
     },
-    contact: {
-        flex: 1,
-        padding: 5,
-        ...Platform.select({
-            ios: {
-                marginBottom: "0%"
-            },
-            android: {
-                marginBottom: 0
-            }
-        })
+    logout: {
+        flexDirection: "row",
+        flexWrap: "wrap"
+    }
+    ,
+    logoutTitle: {
+        fontWeight: "bold",
     },
-    homeTitle: {
-        textAlign: "center"
+    onPressBtn: {
+        padding: 10
     }
 });
 

@@ -1,10 +1,10 @@
 import {StyleSheet, SafeAreaView} from 'react-native'
 import Setting from '../../src/components/UserProfile/Setting'
 
-const SettingScreen = () => {
+const SettingScreen = ({navigation}) => {
     return (
         <SafeAreaView style={styles.contactArea}>
-            <Setting/>
+            <Setting navigation={navigation} />
         </SafeAreaView>
     )
 };
