@@ -8,7 +8,7 @@ const AboutUs = ({about}) => {
                     about.map((data, index) => (
                         <View style={styles.aboutUsMargin} key={index}>
                             <Text style={{textAlign: "justify", lineHeight: 25}}>
-                                {data?.description}
+                                {data?.row_description}
                             </Text>
                         </View>
                     ))

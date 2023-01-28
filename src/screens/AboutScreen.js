@@ -5,6 +5,7 @@ import Loader from '../components/Base/Loader'
 import {BASE_URL} from '../api/api';
 import React, {useState, useEffect} from 'react';
 
+
 const AboutScreen = () => {
     const [loading, setLoading] = useState(true);
     const [about, setAbout] = useState([]);
