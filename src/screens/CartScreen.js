@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {
     SafeAreaView,
     View,
@@ -7,12 +7,31 @@ import {
     ScrollView,
     Text,
     TouchableOpacity,
+    RefreshControl,
 } from 'react-native';
 import Cart from '../components/Cart/Cart';
 import EmptyCart from '../components/Cart/EmptyCart';
 
 
 const CartScreen = ({navigation}) => {
+
+    const [refresh, setRefresh] = useState(false);
+
+    const [refreshing, setRefreshing] = React.useState(false);
+    //
+    // const onRefresh = React.useCallback(() => {
+    //     setRefreshing(true);
+    //     setTimeout(() => {
+    //         setRefreshing(false);
+    //     }, 2000);
+    // }, []);
+
+    useEffect(() => {
+        if (refresh) {
+            setRefresh(false);
+        }
+    }, [refresh]);
+
     return (
         <SafeAreaView style={styles.safeArea}>
             <View style={styles.container}>
@@ -29,14 +48,18 @@ const CartScreen = ({navigation}) => {
                     </View>
                 </View>
                 {/*Proceed to Order*/}
-                <TouchableOpacity onPress={()=>navigation.navigate('CheckoutStack')}>
+                {/*<TouchableOpacity onPress={() => navigation.navigate('CheckoutStack') }>*/}
+                <TouchableOpacity onPress={() => {
+                    navigation.navigate('CheckoutStack');
+                    setRefresh(true);
+                }}>
                     <View style={styles.proceedOrder}>
                         <Text style={styles.proceedOrderTitle}>Proceed to Order </Text>
                     </View>
                 </TouchableOpacity>
             </View>
             {/*<View style={styles.container}>*/}
-                {/*<EmptyCart navigation={navigation}/>*/}
+            {/*<EmptyCart navigation={navigation}/>*/}
             {/*</View>*/}
         </SafeAreaView>
     );
