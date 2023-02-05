@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+
 import {
     SafeAreaView,
     View,
@@ -11,48 +12,43 @@ import {
 } from 'react-native';
 import Cart from '../components/Cart/Cart';
 import EmptyCart from '../components/Cart/EmptyCart';
-
+import Loader from '../components/Loader/Loader'
 
 const CartScreen = ({navigation}) => {
+    const [loading, setLoading] = useState(true);
+    const [count, setCount] = useState(0);
 
-    const [refresh, setRefresh] = useState(false);
-
-    const [refreshing, setRefreshing] = React.useState(false);
-    //
-    // const onRefresh = React.useCallback(() => {
-    //     setRefreshing(true);
-    //     setTimeout(() => {
-    //         setRefreshing(false);
-    //     }, 2000);
-    // }, []);
+    const handleButtonClick = () => {
+        setCount(count + 1);
+        navigation.navigate('CheckoutStack');
+    };
 
     useEffect(() => {
-        if (refresh) {
-            setRefresh(false);
-        }
-    }, [refresh]);
+        setTimeout(() => {
+            setLoading(false);
+        }, 1000)
+    },[]);
 
     return (
         <SafeAreaView style={styles.safeArea}>
             <View style={styles.container}>
                 <ScrollView>
-                    <Cart/>
+                    <Cart count={count}/>
                 </ScrollView>
+                <Text>{count}</Text>
                 {/*Total Amount*/}
                 <View style={styles.totalAmountContent}>
+
                     <View style={styles.totalAmountInfo}>
                         <Text style={styles.totalAmountTitle}>Total Amount : </Text>
                     </View>
                     <View style={styles.totalAmountRight}>
-                        <Text style={styles.totalAmountPrice}> ৳ 800</Text>
+                        <Text style={styles.totalAmountPrice}> ৳ 800 </Text>
                     </View>
                 </View>
                 {/*Proceed to Order*/}
                 {/*<TouchableOpacity onPress={() => navigation.navigate('CheckoutStack') }>*/}
-                <TouchableOpacity onPress={() => {
-                    navigation.navigate('CheckoutStack');
-                    setRefresh(true);
-                }}>
+                <TouchableOpacity onPress={handleButtonClick}>
                     <View style={styles.proceedOrder}>
                         <Text style={styles.proceedOrderTitle}>Proceed to Order </Text>
                     </View>
@@ -63,6 +59,7 @@ const CartScreen = ({navigation}) => {
             {/*</View>*/}
         </SafeAreaView>
     );
+
 };
 
 const styles = StyleSheet.create({
@@ -80,6 +77,9 @@ const styles = StyleSheet.create({
                 marginBottom: 0,
             },
         }),
+    },
+    loading: {
+        flex: 1,
     },
     totalAmountContent: {
         flexDirection: 'row',
