@@ -31,47 +31,42 @@ const SecurityPrivacyScreens = () => {
         return securityPrivacyJson;
     };
 
-
     useEffect(() => {
         async function sleep() {
             await new Promise(resolve => setTimeout(resolve, 2000));
         }
         sleep();
         getSecurityPrivacyData().then((data) => {
-            setLoading(true)
+            setLoading(true);
             setSecurityPrivacy(data);
-
         })
     }, []);
 
-
-     const source = {
+    const source = {
         html: `<p style="line-height: 30px; text-align: justify">${securityPrivacy?.description}</p>`
     };
 
+    return (
+        <SafeAreaView style={styles.securityPrivacyContainer}>
+            {
+                loading ?
+                    <Loader/>
+                    :
+                    <View style={styles.securityPrivacy}>
 
+                        <ScrollView>
+                            <View style={styles.securityPrivacyMargin}>
+                                <RenderHtml
+                                    contentWidth={width}
+                                    source={source}
+                                />
+                            </View>
+                        </ScrollView>
+                    </View>
+            }
 
-        return (
-            <SafeAreaView style={styles.securityPrivacyContainer}>
-                {
-                    loading ?
-                        <Loader/>
-                        :
-                        <View style={styles.securityPrivacy}>
-
-                            <ScrollView>
-                                <View style={styles.securityPrivacyMargin}>
-                                    <RenderHtml
-                                        contentWidth={width}
-                                        source={source}
-                                    />
-                                </View>
-                            </ScrollView>
-                        </View>
-                }
-
-            </SafeAreaView>
-        );
+        </SafeAreaView>
+    );
 
 };
 const styles = StyleSheet.create({
