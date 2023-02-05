@@ -73,7 +73,7 @@ const Checkout = ({navigation}) => {
                                                 </Text>
                                             </View>
                                             <View style={{flex: 4}}>
-                                                <Text>Inside Dhaka</Text>
+                                                <Text style={{color:"#fff"}}>Inside Dhaka</Text>
                                             </View>
                                         </View>
                                     </View>
@@ -167,7 +167,7 @@ const styles = StyleSheet.create({
     },
     totalItems: {
         textAlign: "center",
-        backgroundColor: "#6C757D",
+        backgroundColor: "#551E18",
         borderRadius: 7,
         padding: 3,
         fontWeight: "bold",
@@ -364,13 +364,13 @@ const styles = StyleSheet.create({
 
     insideDhakaButton: {
         padding: 5,
-        backgroundColor: "#F9C65D",
+        backgroundColor: "#551E18",
+        color:"#FFF",
         textAlign: "center",
         borderWidth: 1,
         borderRadius: 8,
         fontWeight: "bold",
-        borderColor: "#F9C65D",
-        color: "black",
+        borderColor: "#551E18",
         overflow: "hidden",
     },
     outSideDhakaButton: {

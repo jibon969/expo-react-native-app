@@ -2,7 +2,8 @@ import React from 'react';
 import {View, StyleSheet, Text, TouchableOpacity, Image} from 'react-native';
 import {FontAwesome} from '@expo/vector-icons';
 
-const Cart = () => {
+const Cart = ({count}) => {
+    console.log(count);
     return (
         <View style={styles.mainContent}>
             <View style={styles.cartImageWrap}>
