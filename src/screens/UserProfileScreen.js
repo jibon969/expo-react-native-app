@@ -10,7 +10,6 @@ import {
     TouchableOpacity
 } from 'react-native';
 
-import {AntDesign} from '@expo/vector-icons';
 import {FontAwesome} from '@expo/vector-icons';
 import {MaterialIcons} from '@expo/vector-icons';
 
@@ -21,13 +20,13 @@ const UserProfileScreen = ({navigation}) => {
         <SafeAreaView style={styles.container}>
             <View style={styles.userProfile}>
                 <View style={styles.userProfileImageWrap}>
-                    <Image source={require('../assets/user-icon.jpg')}
+                    <Image source={require('../assets/jibon.jpg')}
                            style={styles.profileImage}
                            resizeMode={'contain'}
                     />
                 </View>
                 <View style={styles.userProfileWrapper}>
-                    <Text style={styles.userProfileTitle}> Contact Number </Text>
+                    <Text style={styles.userProfileTitle}> jibon.py@gmail.com </Text>
                 </View>
 
                 <ScrollView>
